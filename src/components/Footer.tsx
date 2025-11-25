@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center gap-4">
+    <footer className="flex flex-col items-center justify-center gap-4  py-8">
       <div className="flex pt-4 gap-4">
         <Button asChild variant="secondary" className="rounded-full">
           <a href="mailto:darpanbhavesh@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -21,7 +21,7 @@ export default function Footer() {
           </a>
         </Button>
       </div>
-      <div className="text-center text-sm">&copy; 2025 designed and developed by Bhavesh Darpan using React and shadcn/ui.</div>
+      <div className="text-center text-sm font-semibold">&copy; 2025 designed and developed by Bhavesh Darpan using React and shadcn/ui.</div>
     </footer>
   );
 }

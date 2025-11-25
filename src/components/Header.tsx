@@ -1,95 +1,88 @@
-import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import { ArrowUpRight, Menu } from "lucide-react";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "./mode-toggle";
 
+const menu = [
+  { title: "Work", url: "/" },
+  { title: "Fun", url: "/fun" },
+];
+
 export default function Header() {
-  const menu = [
-    { title: "Projects", url: "/" },
-    { title: "Fun", url: "/fun" },
-    { title: "About", url: "/about" },
-  ];
-
-  const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setShowHeader(false);
-      } else {
-        setShowHeader(true);
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  const location = useLocation();
 
   return (
-    <header
-      className={`fixed top-0 right-0 left-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-transform duration-300 ease-in-out ${
-        showHeader ? "translate-y-0" : "-translate-y-full"
-      }`}>
-      <div className="flex items-center justify-between mx-auto px-8 min-h-[64px] gap-4">
-        {/* Left: Logo */}
-        <a href="/" className="flex-shrink-0">
-          <span className="text-2xl font-bold">Bhavesh.</span>
+    // <header className="sticky z-50 w-full p-4 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky z-50 w-full p-4">
+      <div className="flex items-center justify-between max-w-7xl mx-auto w-full">
+        {/* Logo */}
+        <a href="/" className="flex-shrink-0 group">
+          <span className="text-2xl font-bold">
+            Bhavesh<span className="text-primary group-hover:text-primary">.</span>
+          </span>
         </a>
 
-        {/* Center Menu - Desktop */}
+        {/* Desktop Menu */}
         <NavigationMenu className="hidden lg:flex flex-grow justify-center">
           <NavigationMenuList className="flex gap-4">
             {menu.map((item) => (
               <NavigationMenuItem key={item.title}>
-                <NavigationMenuLink href={item.url}>{item.title}</NavigationMenuLink>
+                <NavigationMenuLink
+                  href={item.url}
+                  className={`px-4 py-2 rounded-md text-base transition-colors font-medium ${
+                    location.pathname === item.url ? "text-primary font-semibold" : "hover:bg-muted hover:text-primary"
+                  }`}>
+                  {item.title}
+                </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Right: Resume Button and ModeToggle */}
+        {/* Desktop Resume Button */}
         <div className="hidden lg:flex items-center gap-4">
-          <ModeToggle />
-          <Button asChild variant="secondary">
-            <a href="https://drive.google.com/file/d/19FOqMruzJTsGIzzSzQ2ibAN9x5xw99Nq/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <Button asChild variant="outline" className="font-medium">
+            <a
+              href="https://drive.google.com/file/d/19FOqMruzJTsGIzzSzQ2ibAN9x5xw99Nq/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1">
               Resume
+              <ArrowUpRight className="w-4 h-4" />
             </a>
           </Button>
+          <ModeToggle />
         </div>
 
         {/* Mobile Menu */}
-        <div className="block lg:hidden flex gap-4">
-          <ModeToggle />
+        <div className="flex lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">
-                <Menu className="w-4 h-4" />
+                <Menu className="w-5 h-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="h-screen w-full max-w-full p-8 flex flex-col justify-center items-center gap-8">
-              {/* <SheetHeader>
-                <SheetTitle className="text-center font-bold text-2xl mb-8">Bhavesh.</SheetTitle>
-              </SheetHeader> */}
 
-              <nav className="flex flex-col gap-6 text-xl font-semibold text-center">
+            <SheetContent side="top" className="h-screen w-full p-8 flex flex-col justify-between max-w-full">
+              {/* Mobile Nav */}
+              <nav className="flex flex-col gap-6 text-lg font-medium">
                 {menu.map((item) => (
-                  <a key={item.title} href={item.url} className="hover:underline">
+                  <a
+                    key={item.title}
+                    href={item.url}
+                    className={`py-2 rounded-md transition ${
+                      location.pathname === item.url ? "text-primary font-semibold" : "hover:bg-muted hover:text-primary"
+                    }`}>
                     {item.title}
                   </a>
                 ))}
               </nav>
 
-              <Button variant="secondary" asChild>
-                <a
-                  href="https://drive.google.com/file/d/19FOqMruzJTsGIzzSzQ2ibAN9x5xw99Nq/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-10 py-3">
+              {/* Mobile Resume Button */}
+              <Button asChild variant="secondary" className="w-full font-medium">
+                <a href="https://drive.google.com/file/d/19FOqMruzJTsGIzzSzQ2ibAN9x5xw99Nq/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Resume
                 </a>
               </Button>
