@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
@@ -15,8 +15,13 @@ export default function Footer() {
             <Linkedin className="w-6 h-6" />
           </a>
         </Button>
+        <Button asChild variant="secondary" className="rounded-full">
+          <a href="https://www.github.com/bhaveshdarpan/" target="_blank" rel="noopener noreferrer">
+            <Github className="w-6 h-6" fill="currentColor" />
+          </a>
+        </Button>
       </div>
-      <div className="text-center text-sm">&copy; 2025 by Bhavesh Darpan.</div>
+      <div className="text-center text-sm">&copy; 2025 designed and developed by Bhavesh Darpan using React and shadcn/ui.</div>
     </footer>
   );
 }

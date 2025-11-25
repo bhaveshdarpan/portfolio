@@ -4,6 +4,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProjectsPage from "./pages/projects";
+import Fun from "./pages/fun";
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<ProjectsPage />} />
-              {/* <Route path="/fun" element={<Fun />} />
-              <Route path="/about" element={<About />} /> */}
+              <Route path="/fun" element={<Fun />} />
+              {/* <Route path="/about" element={<About />} />  */}
             </Routes>
           </main>
           <Footer />
