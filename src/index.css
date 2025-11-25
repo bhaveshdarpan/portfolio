@@ -8,29 +8,37 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
   --color-destructive: var(--destructive);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -44,82 +52,78 @@
 :root {
   --radius: 0.75rem;
 
-  /* Base layers */
-  --background: var(--color-white);
+  /* LIGHT THEME — Bright + Cosmic Pastels */
+  --background: var(--color-slate-50);
   --foreground: var(--color-slate-900);
 
-  /* Surface layers */
-  --card: var(--color-slate-50);
+  --card: var(--color-white);
   --card-foreground: var(--color-slate-900);
-  --popover: var(--color-slate-50);
+
+  --popover: var(--color-white);
   --popover-foreground: var(--color-slate-900);
 
-  /* Brand color - improved contrast */
-  --primary: var(--color-fuchsia-700); /* darker → better contrast */
+  /* Cosmic primary — soft but vibrant */
+  --primary: var(--color-fuchsia-600);
   --primary-foreground: var(--color-white);
 
-  /* Secondary */
-  --secondary: var(--color-fuchsia-200); /* brighter + more contrast */
-  --secondary-foreground: var(--color-fuchsia-900);
+  /* Soft cosmic violet */
+  --secondary: var(--color-violet-300);
+  --secondary-foreground: var(--color-slate-900);
 
-  /* Muted */
-  --muted: var(--color-slate-100);
+  --muted: var(--color-slate-200);
   --muted-foreground: var(--color-slate-600);
 
-  /* Accent */
-  --accent: var(--color-fuchsia-300); /* slightly darker */
-  --accent-foreground: var(--color-fuchsia-900);
+  /* Indigo glow */
+  --accent: var(--color-indigo-400);
+  --accent-foreground: var(--color-white);
 
-  /* Error */
   --destructive: var(--color-red-600);
   --destructive-foreground: var(--color-white);
 
-  /* Structure */
   --border: var(--color-slate-300);
   --input: var(--color-slate-300);
-  --ring: var(--color-fuchsia-600);
+  --ring: var(--color-fuchsia-500);
 
-  /* Charts */
+  /* Pastel cosmic chart */
   --chart-1: var(--color-fuchsia-600);
-  --chart-2: var(--color-fuchsia-500);
-  --chart-3: var(--color-fuchsia-400);
+  --chart-2: var(--color-violet-400);
+  --chart-3: var(--color-indigo-500);
   --chart-4: var(--color-fuchsia-700);
-  --chart-5: var(--color-fuchsia-800);
+  --chart-5: var(--color-purple-600);
 
-  /* Sidebar */
-  --sidebar: var(--color-slate-50);
+  /* Sidebar remains soft-light */
+  --sidebar: var(--color-slate-100);
   --sidebar-foreground: var(--color-slate-900);
-  --sidebar-primary: var(--color-fuchsia-700);
+  --sidebar-primary: var(--color-fuchsia-600);
   --sidebar-primary-foreground: var(--color-white);
-  --sidebar-accent: var(--color-fuchsia-200);
-  --sidebar-accent-foreground: var(--color-fuchsia-900);
-  --sidebar-border: var(--color-slate-200);
-  --sidebar-ring: var(--color-fuchsia-600);
+  --sidebar-accent: var(--color-indigo-300);
+  --sidebar-accent-foreground: var(--color-slate-900);
+  --sidebar-border: var(--color-slate-300);
+  --sidebar-ring: var(--color-fuchsia-500);
 }
 
 .dark {
+  /* DARK THEME — True Cosmic Night */
   --background: var(--color-slate-950);
   --foreground: var(--color-slate-100);
 
   --card: var(--color-slate-900);
   --card-foreground: var(--color-slate-100);
+
   --popover: var(--color-slate-900);
   --popover-foreground: var(--color-slate-100);
 
-  /* Primary - high contrast on slate-950 */
-  --primary: var(--color-fuchsia-500);
-  --primary-foreground: var(--color-white);
+  --primary: var(--color-fuchsia-400);
+  --primary-foreground: var(--color-slate-950);
 
-  /* Secondary */
-  --secondary: var(--color-fuchsia-400);
+  --secondary: var(--color-violet-300);
   --secondary-foreground: var(--color-slate-950);
 
   --muted: var(--color-slate-800);
   --muted-foreground: var(--color-slate-400);
 
-  /* Accent with higher visibility */
-  --accent: var(--color-fuchsia-500);
-  --accent-foreground: var(--color-white);
+  --accent: var(--color-indigo-300);
+  --accent-foreground: var(--color-slate-950);
 
   --destructive: var(--color-red-500);
   --destructive-foreground: var(--color-white);
@@ -128,19 +132,17 @@
   --input: var(--color-slate-700);
   --ring: var(--color-fuchsia-400);
 
-  /* Charts */
-  --chart-1: var(--color-fuchsia-500);
-  --chart-2: var(--color-fuchsia-400);
-  --chart-3: var(--color-fuchsia-300);
-  --chart-4: var(--color-fuchsia-600);
-  --chart-5: var(--color-fuchsia-700);
+  --chart-1: var(--color-fuchsia-300);
+  --chart-2: var(--color-violet-300);
+  --chart-3: var(--color-indigo-300);
+  --chart-4: var(--color-fuchsia-400);
+  --chart-5: var(--color-purple-400);
 
-  /* Sidebar */
   --sidebar: var(--color-slate-900);
   --sidebar-foreground: var(--color-slate-100);
-  --sidebar-primary: var(--color-fuchsia-500);
-  --sidebar-primary-foreground: var(--color-white);
-  --sidebar-accent: var(--color-fuchsia-400);
+  --sidebar-primary: var(--color-fuchsia-400);
+  --sidebar-primary-foreground: var(--color-slate-950);
+  --sidebar-accent: var(--color-indigo-300);
   --sidebar-accent-foreground: var(--color-slate-950);
   --sidebar-border: var(--color-slate-700);
   --sidebar-ring: var(--color-fuchsia-400);
@@ -153,5 +155,6 @@
   body {
     @apply bg-background text-foreground;
     font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
   }
 }
