@@ -1,7 +1,7 @@
 import Hero from "./Hero";
 import Projects from "./Projects";
 
-export default function ProjectsPage() {
+export default function Work() {
   return (
     <div>
       <Hero />
