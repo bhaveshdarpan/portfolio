@@ -137,7 +137,7 @@ export default function FluidParticlesBackground({
 
     const animate = () => {
       const isDark = document.documentElement.classList.contains("dark");
-      const scheme = isDark ? COLOR_SCHEME.dark : COLOR_SCHEME.light;
+      // const scheme = isDark ? COLOR_SCHEME.dark : COLOR_SCHEME.light;
 
       ctx.fillStyle = isDark ? "rgba(0, 0, 0, 0.1)" : "rgba(255, 255, 255, 0.1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);

@@ -49,7 +49,7 @@ export default function Photography() {
       <h1 className="text-3xl font-medium">Photography</h1>
       <p className="text-muted-foreground mt-2 mb-8">A collection of moments captured through my lens.</p>
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 w-full">
-        {photos.map(({ title, hoverText, src }, index) => (
+        {photos.map(({ title, src }, index) => (
           <div key={index} className="group relative">
             <AspectRatio ratio={4 / 3} className="relative rounded-xl overflow-hidden">
               <img src={src} alt={title} className="object-cover" />

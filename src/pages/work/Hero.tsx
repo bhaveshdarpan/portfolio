@@ -59,11 +59,11 @@ export default function Hero() {
   );
 }
 
-function WaveEmojiImage() {
-  return (
-    <picture>
-      <source srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp" type="image/webp" />
-      <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" alt="Wave Hand Emoji" width={48} height={48} />
-    </picture>
-  );
-}
+// function WaveEmojiImage() {
+//   return (
+//     <picture>
+//       <source srcSet="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp" type="image/webp" />
+//       <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" alt="Wave Hand Emoji" width={48} height={48} />
+//     </picture>
+//   );
+// }
