@@ -11,6 +11,13 @@ const projects = [
     tags: ["UI Design", "UX", "Frontend Engineering"],
   },
   {
+    title: "Harvest 2059: An Educational Tabletop Game",
+    description: "A systems-heavy tabletop game exploring speculative futures and resource trade-offs.",
+    imageSrc: "/IMG-20240313-WA0012.png",
+    altText: "Harvest 2059 Game Image",
+    tags: ["Game Design", "Prototyping", "Playtesting"],
+  },
+  {
     title: "Hostel Room Furniture Design",
     description: "Designing ergonomic and modular room furniture based on ethnographic insights.",
     imageSrc: "/IMG-20240313-WA0012.png",
@@ -18,7 +25,7 @@ const projects = [
     tags: ["Ethnography", "Ergonomics", "3D Modeling"],
   },
   {
-    title: "Harvest 2059: Tabletop Game",
+    title: "Anthill: Tabletop Game",
     description: "A systems-heavy tabletop game exploring speculative futures and resource trade-offs.",
     imageSrc: "/IMG-20240313-WA0012.png",
     altText: "Harvest 2059 Game Image",
