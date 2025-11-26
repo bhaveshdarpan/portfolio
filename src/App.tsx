@@ -9,7 +9,7 @@ import NotFound from "./components/NotFound";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Router>
         <div className="flex flex-col flex-1 max-w-7xl mx-auto">
           <Header />
