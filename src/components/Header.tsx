@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { ArrowUpRight, Menu } from "lucide-react";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "./mode-toggle";
 
 const menu = [
@@ -45,7 +45,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <Button asChild variant="outline" className="font-medium">
             <a
-              href="https://drive.google.com/file/d/19FOqMruzJTsGIzzSzQ2ibAN9x5xw99Nq/view?usp=sharing"
+              href="https://drive.google.com/file/d/1rpAktLPZ0EzCU8wUkc8ymUHDu0exjuHH/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1">
@@ -57,7 +57,8 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="flex lg:hidden">
+        <div className="flex gap-4 lg:hidden">
+          <ModeToggle />
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">
@@ -67,7 +68,7 @@ export default function Header() {
 
             <SheetContent side="top" className="h-screen w-full p-8 flex flex-col justify-between max-w-full">
               {/* Mobile Nav */}
-              <nav className="flex flex-col gap-6 text-lg font-medium">
+              <nav className="flex flex-col gap-6 text-lg font-medium items-center">
                 {menu.map((item) => (
                   <a
                     key={item.title}
@@ -81,11 +82,13 @@ export default function Header() {
               </nav>
 
               {/* Mobile Resume Button */}
-              <Button asChild variant="secondary" className="w-full font-medium">
-                <a href="https://drive.google.com/file/d/19FOqMruzJTsGIzzSzQ2ibAN9x5xw99Nq/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Resume
-                </a>
-              </Button>
+              <SheetFooter>
+                <Button asChild variant="secondary" className="w-full font-medium">
+                  <a href="https://drive.google.com/file/d/1rpAktLPZ0EzCU8wUkc8ymUHDu0exjuHH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    Resume
+                  </a>
+                </Button>
+              </SheetFooter>
             </SheetContent>
           </Sheet>
         </div>

@@ -11,5 +11,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "https://portfolio-sepia-delta-40.vercel.app/",
+  base: "https://www.bhaveshdarpan.com/",
 });
