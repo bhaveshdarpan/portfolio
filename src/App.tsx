@@ -7,6 +7,7 @@ import Work from "./pages/work";
 import Fun from "./pages/fun";
 import NotFound from "./components/NotFound";
 import BicycleParking from "./pages/projects/BicycleParking";
+import IndradhanuWebsite from "./pages/projects/IndradhanuWebsite";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/fun" element={<Fun />} />
               {/* <Route path="/about" element={<About />} />  */}
 
+              <Route path="/indradhanuwebsite" element={<IndradhanuWebsite />} />
               <Route path="/bicycleparking" element={<BicycleParking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
