@@ -20,18 +20,11 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-6xl mx-auto h-full -translate-y-12">
         <div className="text-center md:text-left p-4 md:p-0">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug mb-6">
-            Hey! I'm <span className="text-primary">Bhavesh</span>.
-          </h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug mb-4">Hi there!</h1>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-4 font-medium">
-            I'm a <span className="text-primary font-semibold">design engineer</span> by practice,
-            <span className="text-primary font-semibold"> systems thinker</span> by instinct, and a
-            <span className="text-primary font-semibold"> problem solver</span> at heart.
-          </p>
-
-          <p className="text-lg md:text-xl text-muted-foreground mb-4 font-medium max-w-xl">
-            I approach design as a way to connect people, ideas, and technology—building systems that feel intentional, intuitive, and quietly delightful.
+            I'm <span className="text-primary font-semibold">Bhavesh</span>, a <span className="text-primary">design engineer</span> crafting playful, intuitive
+            and humane experiences — driven by curiosity and a passion for solving complex problems for a better tomorrow.
           </p>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 font-medium max-w-xl">
@@ -58,4 +51,3 @@ export default function Hero() {
     </section>
   );
 }
-

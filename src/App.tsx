@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Work from "./pages/work";
 import Fun from "./pages/fun";
 import NotFound from "./components/NotFound";
+import BicycleParking from "./pages/projects/BicycleParking";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
               <Route path="/" element={<Work />} />
               <Route path="/fun" element={<Fun />} />
               {/* <Route path="/about" element={<About />} />  */}
+
+              <Route path="/bicycleparking" element={<BicycleParking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

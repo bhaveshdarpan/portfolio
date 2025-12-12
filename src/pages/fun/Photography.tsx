@@ -53,11 +53,6 @@ export default function Photography() {
           <div key={index} className="group relative">
             <AspectRatio ratio={4 / 3} className="relative rounded-xl overflow-hidden">
               <img src={src} alt={title} className="object-cover" />
-
-              {/* <PhotoLabel title={title} description={hoverText} /> */}
-              {/* <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-white text-center text-sm">
-                {hoverText}
-              </div> */}
             </AspectRatio>
           </div>
         ))}

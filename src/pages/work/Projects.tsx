@@ -1,6 +1,4 @@
-import { Item, ItemContent, ItemDescription, ItemGroup, ItemHeader, ItemTitle } from "@/components/ui/item";
-
-import { Badge } from "@/components/ui/badge";
+import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
@@ -9,6 +7,15 @@ const projects = [
     imageSrc: "/indradhanu.png",
     altText: "Indradhanu Project Screenshot",
     tags: ["UI Design", "UX", "Frontend Engineering"],
+    // link: "https://indradhanu-project.com",
+  },
+  {
+    title: "Bicycle Parking at IIT Delhi",
+    description: "Solving bicycle parking challenges through user-centered design",
+    imageSrc: "/work/bicycle-parking.svg",
+    altText: "Bicycle Parking at IIT Delhi",
+    tags: ["User Research", "Design Thinking"],
+    link: "/bicycleparking",
   },
   {
     title: "Harvest 2059: An Educational Tabletop Game",
@@ -16,6 +23,7 @@ const projects = [
     imageSrc: "/IMG-20240313-WA0012.png",
     altText: "Harvest 2059 Game Image",
     tags: ["Game Design", "Prototyping", "Playtesting"],
+    // link: "/harvest2059",
   },
   {
     title: "Hostel Room Furniture Design",
@@ -23,40 +31,26 @@ const projects = [
     imageSrc: "/IMG-20240313-WA0012.png",
     altText: "Hostel Furniture Project Illustration",
     tags: ["Ethnography", "Ergonomics", "3D Modeling"],
+    // no link → upcoming
   },
   {
     title: "Anthill: Tabletop Game",
     description: "A systems-heavy tabletop game exploring speculative futures and resource trade-offs.",
     imageSrc: "/IMG-20240313-WA0012.png",
-    altText: "Harvest 2059 Game Image",
+    altText: "Anthill Game Image",
     tags: ["Game Design", "Prototyping", "Playtesting"],
+    // link: "/anthill",
   },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="flex flex-col items-center justify-center p-8">
-      <ItemGroup className="grid w-full max-w-6xl grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map(({ title, description, imageSrc, altText, tags }) => (
-          <Item key={title} variant="outline" className="hover:scale-[1.02] transition-transform duration-300">
-            <ItemHeader className="overflow-hidden rounded-sm">
-              <img src={imageSrc} alt={altText} className="aspect-[4/3] w-full object-cover" />
-            </ItemHeader>
-
-            <ItemContent className="items-center">
-              <ItemTitle className="text-lg md:text-xl font-medium">{title}</ItemTitle>
-              <ItemDescription className="text-sm md:text-base">{description}</ItemDescription>
-              <div className="flex flex-wrap gap-2">
-                {tags.map((tag) => (
-                  <Badge key={tag} variant="secondary">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            </ItemContent>
-          </Item>
+      <div className="grid max-w-6xl grid-cols-1 md:grid-cols-2 gap-8">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
         ))}
-      </ItemGroup>
+      </div>
     </section>
   );
 }
