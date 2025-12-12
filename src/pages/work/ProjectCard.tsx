@@ -1,4 +1,3 @@
-import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Item, ItemContent, ItemDescription, ItemHeader, ItemTitle } from "@/components/ui/item";
 import { cn } from "@/lib/utils";
