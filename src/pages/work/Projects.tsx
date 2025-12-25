@@ -3,11 +3,11 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
     title: "Indradhanu Website Modernization",
-    description: "A complete redesign of Indradhanu's digital identity and user experience.",
-    imageSrc: "/indradhanu.png",
+    description: "Improving Indradhanu's web experience by enhancing usability, visual clarity, and long-term maintainability",
+    imageSrc: "/work/indradhanuwebsite.svg",
     altText: "Indradhanu Project Screenshot",
     tags: ["UI Design", "UX", "Frontend Engineering"],
-    // link: "https://indradhanu-project.com",
+    link: "/indradhanuwebsite",
   },
   {
     title: "Bicycle Parking at IIT Delhi",

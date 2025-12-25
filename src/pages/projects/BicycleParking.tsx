@@ -7,7 +7,7 @@ const bicycleParkingHeader = {
   team: ["Niharika Bhardwaj", "Bhavesh Darpan", "Himanshu Pipal", "Shivangi Anand"],
   tools: ["Figma", "Adobe Illustrator", "Office Suite"],
   faculty: "Prof. Srinivasan Venkataraman",
-  role: "User Researcher, Designer",
+  role: "User Researcher, Interaction Designer",
   duration: "Sept 2023 - Nov 2023 (12 weeks)",
   location: "New Delhi, India",
 };
