@@ -9,6 +9,7 @@ import NotFound from "./components/NotFound";
 import BicycleParking from "./pages/projects/BicycleParking";
 import IndradhanuWebsite from "./pages/projects/IndradhanuWebsite";
 import IndradhanuBranding from "./pages/projects/IndradhanuBranding";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           </main>
           <Footer />
         </div>
+        <Analytics />
       </Router>
     </ThemeProvider>
   );
