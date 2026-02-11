@@ -8,6 +8,7 @@ import Fun from "./pages/fun";
 import NotFound from "./components/NotFound";
 import BicycleParking from "./pages/projects/BicycleParking";
 import IndradhanuWebsite from "./pages/projects/IndradhanuWebsite";
+import { Analytics } from "@vercel/analytics/react";
 // import IndradhanuBranding from "./pages/projects/IndradhanuBranding";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           </main>
           <Footer />
         </div>
+        <Analytics />
       </Router>
     </ThemeProvider>
   );
