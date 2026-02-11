@@ -8,8 +8,8 @@ import Fun from "./pages/fun";
 import NotFound from "./components/NotFound";
 import BicycleParking from "./pages/projects/BicycleParking";
 import IndradhanuWebsite from "./pages/projects/IndradhanuWebsite";
-import IndradhanuBranding from "./pages/projects/IndradhanuBranding";
 import { Analytics } from "@vercel/analytics/react";
+// import IndradhanuBranding from "./pages/projects/IndradhanuBranding";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
               {/* <Route path="/about" element={<About />} />  */}
 
               <Route path="/indradhanuwebsite" element={<IndradhanuWebsite />} />
-              <Route path="/indradhanubranding" element={<IndradhanuBranding />} />
+              {/* <Route path="/indradhanubranding" element={<IndradhanuBranding />} /> */}
               <Route path="/bicycleparking" element={<BicycleParking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

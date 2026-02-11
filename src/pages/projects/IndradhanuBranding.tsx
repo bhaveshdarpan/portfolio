@@ -1,22 +1,29 @@
 import ProjectHeader from "./ProjectHeader";
+import ProjectShowcase from "./ProjectShowcase";
 
-const IndradhanuBranding = () => {
-  return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-12">
-      <ProjectHeader
-        title="Indradhanu Branding"
-        subtitle="Branding and visual identity design for Indradhanu."
-        role="Brand Designer"
-        duration="TBD"
-        location="TBD"
-      />
-      <div className="mt-8">
-        <p className="text-muted-foreground">
-          Coming soon...
-        </p>
-      </div>
-    </div>
-  );
+const indradhanuIdentityHeader = {
+  title: "Indradhanu & Pride Festival Visual Identity",
+  subtitle: "A multi-medium visual campaign designed to build awareness and drive participation for a student-led annual pride festival.",
+  team: ["Team of 5 Designers"],
+  tools: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
+  // faculty: "Prof. Srinivasan Venkataraman",
+  role: "Head of Creative Media and Outreach, Visual Designer",
+  duration: "Dec 2023 - Jan 2024 (6 weeks)",
+  location: "New Delhi, India",
 };
 
-export default IndradhanuBranding;
+const slides = [
+  {
+    src: "/work/indradhanu-identity/context.svg",
+    alt: "Context",
+  },
+];
+
+export default function IndradhanuBranding() {
+  return (
+    <div>
+      <ProjectHeader {...indradhanuIdentityHeader} />
+      <ProjectShowcase slides={slides} />
+    </div>
+  );
+}
