@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { ArrowUpRight, Menu } from "lucide-react";
+import { ArrowUpRight, Github, Menu } from "lucide-react";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
@@ -51,6 +51,12 @@ export default function Header() {
               className="flex items-center gap-1">
               Resume
               <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="https://www.github.com/bhaveshdarpan/" target="_blank" rel="noopener noreferrer">
+              <Github className="w-6 h-6" fill="currentColor" />
+              {/* <ArrowUpRight className="w-4 h-4" /> */}
             </a>
           </Button>
           <ModeToggle />
